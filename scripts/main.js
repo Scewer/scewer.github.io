@@ -1,3 +1,14 @@
+let myImage = document.querySelector('img');
+
+myImage.onclick = function() {
+  let mySrc = myImage.getAttribute('src');
+  if(mySrc === 'images/firefox-icon.png') {
+    myImage.setAttribute ('src','images/Screenshot.jpg');
+  } else {
+    myImage.setAttribute ('src','images/copy.jpg');
+  }
+}
+
 var myButton = document.querySelector('button');
 var myHeading = document.querySelector('h1');
 function setUserName() {
@@ -18,13 +29,5 @@ if(!localStorage.getItem('name')) {
 myButton.onclick = function(){
     setUserName();
 }
-var myImage = document.querySelector('img');
 
-myImage.onclick = function() {
-    var mySrc = myImage.getAttribute ('src');
-    if(mySrc==='images/Screenshot.jpg'){
-      myImage.setAttribute ('src','images/Screenshot.jpg')
-    } else {
-        myImage.setAttribute('src','images/copy.jpg');
-    }
-}
+
